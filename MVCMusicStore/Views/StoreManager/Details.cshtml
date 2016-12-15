@@ -6,35 +6,53 @@
 
 <h2>Details</h2>
 
-<fieldset>
-    <legend>Album</legend>
+<div>
+    <h4>Album</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Artist.Name)
+        </dt>
 
-    <div class="display-label">Genre</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Genre.Name)
-    </div>
+        <dd>
+            @Html.DisplayFor(model => model.Artist.Name)
+        </dd>
 
-    <div class="display-label">Artist</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Artist.Name)
-    </div>
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.Name)
+        </dt>
 
-    <div class="display-label">Title</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Title)
-    </div>
+        <dd>
+            @Html.DisplayFor(model => model.Genre.Name)
+        </dd>
 
-    <div class="display-label">Price</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Price)
-    </div>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
 
-    <div class="display-label">AlbumArtUrl</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.AlbumArtUrl)
-    </div>
-</fieldset>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlbumArtUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlbumArtUrl)
+        </dd>
+
+    </dl>
+</div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.AlbumId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AlbumId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
